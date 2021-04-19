@@ -4,7 +4,7 @@ const jwksRsa = require('jwks-rsa');
 // Auth0 configuration
 const authConfig = {
   issuer: 'https://dignified.eu.auth0.com/',
-  audience: 'https://api.diggyspizza.com',
+  audience: 'https://dignified.eu.auth0.com/api/v2/',
   algorithms: ['RS256']
 };
 
