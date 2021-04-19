@@ -41,8 +41,7 @@ const Order = () => {
 
       const updateUserProfile = (userProfile) => {
           return getTokenSilently({
-              audience: `${apiBase}/api/v2/`,
-              scope: "update:users update:current_user_metadata"
+              audience: `${apiBase}/api/v2/`
           }).then(accessToken => {
               return axios.patch(getUserApiPath(), {
                   ...userProfile

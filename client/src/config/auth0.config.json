@@ -1,5 +1,5 @@
 {
   "domain": "dignified.eu.auth0.com",
   "clientId": "KxqVoxoJwTLdUVIETzEnbO7kBbATnPO5",
-  "audience": "https://api.diggyspizza.com"
+  "audience": "https://dignified.eu.auth0.com/api/v2/"
 }
