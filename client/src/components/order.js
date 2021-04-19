@@ -29,8 +29,6 @@ const Order = () => {
       })
       .catch((err) => console.log(err));
   };
-    
-  const verifiedStatus = `${user.email_verified}`;
 
   const rejectOrder = () => {
       alert("Please verify your email before placing an order");
@@ -56,6 +54,7 @@ const Order = () => {
               success => {
                   alert("Your order has been successfully placed!");
                   console.log('Order placed', success);
+                  window.location.reload();
               },
               fail => {
                   console.log('failed', fail);
@@ -89,8 +88,10 @@ const Order = () => {
       </>
     );
   }
+
+    const verifiedStatus = `${user.email_verified}`;  
     
-  const verifiedWarning = () => {
+    const verifiedWarning = () => {
       const GuestGreeting = () => {
           return (
             <p className="verifiedMessage">Please verify your email before placing an order.</p>
@@ -132,7 +133,6 @@ const Order = () => {
       return (
         <li className="table-row" key={name}>
           <div className="col col-1">
-            <input type="text" value={name} key={name} readOnly />
             {name}
           </div>
           <div className="col col-2">{price}</div>

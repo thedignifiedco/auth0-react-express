@@ -10,21 +10,5 @@
   {
     "name": "Pepperoni Pizza",
     "price": "£19.99"
-  },
-  {
-    "name": "Meat Pizza",
-    "price": "£19.99"
-  },
-  {
-    "name": "Margherita Pizza",
-    "price": "£19.99"
-  },
-  {
-    "name": "BBQ Chicken Pizza",
-    "price": "£19.99"
-  },
-  {
-    "name": "Hawaiian Pizza",
-    "price": "£19.99"
   }
 ]
