@@ -1,6 +1,6 @@
 FROM node:lts-slim as builder
 
-ARG REACT_APP_API_URL=https://diggyspizzaapi.herokuapp.com/
+ARG REACT_APP_API_URL=https://diggyspizzaapi.herokuapp.com
 
 WORKDIR /usr/src/app
 
