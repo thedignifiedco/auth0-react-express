@@ -1,12 +1,11 @@
 const express = require('express');
-const cors = require('cors');
 
 const { authenticated } = require('./security');
 const { species, menu } = require('./api-data');
 
 const app = express();
 
-const origin = process.env.CORS || 'http://localhost:3000';
+const origin = process.env || 'http://localhost:3000';
 app.use(cors({ origin }));
 
 // Routes
