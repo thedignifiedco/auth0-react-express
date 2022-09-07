@@ -9,7 +9,7 @@ const Home = () => {
   const { isAuthenticated } = useAuth0();
 
   async function fetchData() {
-    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
+    const baseUrl = process.env.REACT_APP_API_URL || 'https://diggys-pizza-api.vercel.app';
     const res = await fetch(`${baseUrl}/species`);
     res
       .json()
