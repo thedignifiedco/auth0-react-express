@@ -1,8 +1,8 @@
 setup:
   config:
-    CORS: https://diggyspizzaapp.herokuapp.com
+    CORS: https://diggys-pizza-app.vercel.app
 build:
   docker:
     web: Dockerfile
 run:
-  web: CORS="https://diggyspizzaapp.herokuapp.com" npm start
+  web: CORS="https://diggys-pizza-app.vercel.app" npm start
