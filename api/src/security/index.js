@@ -6,7 +6,7 @@ const authConfig = {
   issuer: 'https://dignified.eu.auth0.com/',
   audience: 'https://thediginified.co/pizza',
   algorithms: ['RS256'],
-  scope: 'update:current_user_metadata',
+  scope: 'update:users',
 };
 
 const secret = jwksRsa.expressJwtSecret({

@@ -9,7 +9,7 @@ const Order = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [menu, setMenu] = useState();
   const { getTokenSilently, user } = useAuth0();
-  const apiBase = 'https://dignified.eu.auth0.com';
+  const apiBase = 'https://dignified.eu.auth0.com/api/v2';
 
   const fetchData = async () => {
     const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
@@ -63,8 +63,8 @@ const Order = () => {
 
       updateUserProfile({
           user_metadata: {
-              'orders': {
-                  'last_order': 'Veggie Pizza'
+              "orders": {
+                  "last_order": "Veggie Pizza"
               }
           },
       });
