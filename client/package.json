@@ -24,7 +24,7 @@
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "REACT_APP_API_URL=https://diggyspizzaapi.herokuapp.com react-scripts start",
+    "start": "REACT_APP_API_URL=https://diggys-pizza-api.vercel.app react-scripts start",
     "build": "react-scripts build",
     "lint": "eslint './src/**/*.js'",
     "test": "react-scripts test",

@@ -6,7 +6,7 @@ const { species, menu } = require('./api-data');
 
 const app = express();
 
-const origin = process.env.CORS || 'https://diggys-pizza-app.vercel.app';
+const origin = process.env.CORS || 'http://localhost:3000';
 app.use(cors({ origin }));
 
 // Routes

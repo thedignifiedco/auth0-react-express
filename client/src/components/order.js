@@ -12,7 +12,7 @@ const Order = () => {
   const apiBase = 'https://dignified.eu.auth0.com';
 
   const fetchData = async () => {
-    const baseUrl = process.env.REACT_APP_API_URL || 'https://diggys-pizza-api.vercel.app';
+    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
 
     const token = await getTokenSilently();
 
