@@ -5,14 +5,14 @@ const jwksRsa = require('jwks-rsa');
 const authConfig = {
   issuer: 'https://dignified.eu.auth0.com/',
   audience: 'https://dignified.eu.auth0.com/api/v2/',
-  algorithms: ['RS256']
+  algorithms: ['RS256'],
 };
 
 const secret = jwksRsa.expressJwtSecret({
   cache: true,
   rateLimit: true,
   jwksRequestsPerMinute: 5,
-  jwksUri: 'https://dignified.eu.auth0.com/v2/.well-known/jwks.json',
+  jwksUri: 'https://dignified.eu.auth0.com/.well-known/jwks.json',
 });
 
 const authenticated = jwt({ secret, ...authConfig });
