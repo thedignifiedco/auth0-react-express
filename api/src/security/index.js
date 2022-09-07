@@ -5,8 +5,7 @@ const jwksRsa = require('jwks-rsa');
 const authConfig = {
   issuer: 'https://dignified.eu.auth0.com/',
   audience: 'https://dignified.eu.auth0.com/api/v2/',
-  algorithms: ['RS256'],
-  scope: 'update:users'
+  algorithms: ['RS256']
 };
 
 const secret = jwksRsa.expressJwtSecret({
