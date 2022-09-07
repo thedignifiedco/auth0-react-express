@@ -12,7 +12,7 @@ const Order = () => {
   const apiBase = 'https://dignified.eu.auth0.com';
 
   const fetchData = async () => {
-    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
+    const baseUrl = process.env.REACT_APP_API_URL || 'https://diggys-pizza-api.vercel.app';
 
     const token = await getTokenSilently();
 
@@ -35,11 +35,11 @@ const Order = () => {
   };
  
   const placeOrder = () => {
-      const getUserApiPath = () => `${apiBase}/api/v2/users/${user.sub}`;
+      const getUserApiPath = () => `${apiBase}/users/${user.sub}`;
 
       const updateUserProfile = (userProfile) => {
           return getTokenSilently({
-              audience: `${apiBase}/api/v2/`
+              audience: `${apiBase}`
           }).then(accessToken => {
               return axios.patch(getUserApiPath(), {
                   ...userProfile
