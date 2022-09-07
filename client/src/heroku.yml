@@ -2,4 +2,4 @@ build:
   docker:
     web: Dockerfile
   config:
-    REACT_APP_API_URL: https://diggys-pizza-app.vercel.app
+    REACT_APP_API_URL: https://diggys-pizza-api.vercel.app
