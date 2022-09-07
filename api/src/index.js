@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const { authenticated } = require('./security');
 const { species, menu } = require('./api-data');
