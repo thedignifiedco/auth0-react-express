@@ -5,12 +5,9 @@ const { authenticated } = require('./security');
 const { species, menu } = require('./api-data');
 
 const app = express();
-const cors = require('cors');
 
-const origin = process.env.CORS;
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://diggys-pizza-app.vercel.app']
-}));
+const origin = process.env.CORS || 'http://localhost:3000';
+app.use(cors({ origin }));
 
 // Routes
 app.get('/menu', authenticated, (req, res) => {

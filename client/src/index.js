@@ -13,7 +13,7 @@ ReactDOM.render(
     client_id={auth0Config.clientId}
     audience={auth0Config.audience}
     redirect_uri={window.location.origin}
-    scope="update:users"
+    scope={auth0Config.scope}
   >
     <App />
   </Auth0Provider>,

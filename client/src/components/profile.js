@@ -18,7 +18,7 @@ const Profile = () => {
       <div className="col col-2">
         <p>Email: {user.email}</p>
         <p>Email Verified: {JSON.stringify(user.email_verified, 2)}</p>
-        <p>Last ordered: {user["https://diggyspizza.com/last_order"]}</p>
+        <p>Last Pizza Ordered: {user.last_order}</p>
         <p>ID token content:</p>
         <pre>
           <code>{JSON.stringify(user, null, 2)}</code>

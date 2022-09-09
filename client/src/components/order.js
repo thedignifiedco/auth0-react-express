@@ -9,7 +9,7 @@ const Order = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [menu, setMenu] = useState();
   const { getTokenSilently, user } = useAuth0();
-  const apiBase = 'https://dignified.eu.auth0.com/api/v2';
+  const apiBase = 'https://dignified.eu.auth0.com/api/v2/';
 
   const fetchData = async () => {
     const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8080';
@@ -35,11 +35,12 @@ const Order = () => {
   };
  
   const placeOrder = () => {
-      const getUserApiPath = () => `${apiBase}/users/${user.sub}`;
+      const getUserApiPath = () => `${apiBase}users/${user.sub}`;
 
       const updateUserProfile = (userProfile) => {
           return getTokenSilently({
-              audience: `${apiBase}`
+            audience: `${apiBase}`,
+            scope: 'update:current_user_metadata'
           }).then(accessToken => {
               return axios.patch(getUserApiPath(), {
                   ...userProfile
@@ -63,9 +64,7 @@ const Order = () => {
 
       updateUserProfile({
           user_metadata: {
-              "orders": {
-                  "last_order": "Veggie Pizza"
-              }
+            "last_order": "Veggie Pizza"
           },
       });
   };
